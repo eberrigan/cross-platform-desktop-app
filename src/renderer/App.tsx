@@ -1,5 +1,4 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import '@fontsource/open-sans';
 import '@fontsource/open-sans/800.css';
 import '@fontsource/open-sans/600.css';
 import { CssBaseline } from '@mui/material';

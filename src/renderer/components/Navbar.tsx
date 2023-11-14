@@ -13,8 +13,8 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaHamburger } from 'react-icons/fa';
 
-export function Navbar() {
-  const { drawerOpen, setDrawerOpen } = useState(false);
+export default function Navbar() {
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -42,13 +42,19 @@ export function Navbar() {
   return (
     <AppBar position="fixed">
       <Toolbar>
-        <Typography>Bloom Desktop</Typography>
+        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          Bloom Desktop
+        </Typography>
         {isMobile ? (
           <>
-            <IconButton onClick={() => toggleDrawer(true)}>
+            <IconButton color="inherit" onClick={() => toggleDrawer(true)}>
               <FaHamburger />
             </IconButton>
-            <Drawer open={drawerOpen} onClick={() => toggleDrawer(false)}>
+            <Drawer
+              anchor="right"
+              open={drawerOpen}
+              onClick={() => toggleDrawer(false)}
+            >
               <List>
                 <ListItem>{menuItems}</ListItem>
               </List>

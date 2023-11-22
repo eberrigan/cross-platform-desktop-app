@@ -6,6 +6,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import SpeciesList from './pages/SpeciesList';
 import Home from './pages/Home';
+import Login from './pages/Login';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/species-list" element={<SpeciesList />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>

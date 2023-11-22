@@ -37,6 +37,11 @@ export default function Navbar() {
           <Typography>Species</Typography>
         </IconButton>
       </NavLink>
+      <NavLink to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <IconButton>
+          <Typography>Login</Typography>
+        </IconButton>
+      </NavLink>
     </>
   );
   return (
